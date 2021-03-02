@@ -69,4 +69,20 @@ app.get("/quest/decline", (req, res) => {
   });
 });
 
+app.get("/quest/start/impossible", (req, res) => {
+  res.json({
+    location: "",
+    speech: {
+      speaker: {
+        name: "Mr Dragon",
+      },
+      text: "The DrAGOn died from an EXCRUCIATINGLY death by its own fireball",
+    },
+    options: {
+      help: "/help",
+      restart: "/",
+    },
+  });
+});
+
 export default app;
